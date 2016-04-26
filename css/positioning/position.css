@@ -1,6 +1,3 @@
-body {
-
-}
 
 #octopus{  
   display: block;
@@ -14,7 +11,8 @@ body {
   display: block;
   z-index: 1;
   position: relative;
-  top: -250px;
+  top: -350px;
+  left: 10px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -22,6 +20,9 @@ body {
 #glasses {
   display: block;
   z-index: 2;
+  position: relative;
+  top: -357px;
+  left: 5px;
   margin-left: auto;
   margin-right: auto;
 }
