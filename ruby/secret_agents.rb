@@ -18,6 +18,9 @@
 #   - Else leave space unchanged
 =end
 
+# Method declarations
+
+# takes string and shifts to the next sequential letter
 def encrypt(input_str)
   i = 0
   while i < input_str.length
@@ -32,6 +35,7 @@ def encrypt(input_str)
   return input_str
 end
 
+# takes string and shift to the previous sequential letter
 def decrypt(input_str)
   i = 0
   while i < input_str.length
@@ -56,4 +60,28 @@ end
 # returned to decrypt which then unscrambles the message. The unscrambled
 # method is then returned.
 
-puts decrypt(encrypt("swordfish")) 
+# Driver code
+puts "Nested method call"
+puts decrypt(encrypt("swordfish"))
+puts ""
+
+choice = ""
+until (choice == "e") || (choice == "d")
+  puts "Type 'e' to encrypt or 'd' to decrypt a password."
+  choice = gets.chomp.downcase
+end
+puts ""
+
+puts "Please enter password"
+password = gets.chomp.downcase
+
+
+if choice == "e"
+  output_msg = encrypt(password)
+else choice == "d"
+  output_msg = decrypt(password)
+end
+
+puts "Your code is #{output_msg}"
+
+# Worked on by Ben Van Sickle and Edgardo Roman  
