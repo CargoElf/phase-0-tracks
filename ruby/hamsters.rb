@@ -2,21 +2,20 @@ puts "What's the hamster's name?"
 name = gets.chomp
 
 until name != ""
-  puts "Please enter an answer"
+  puts "Please enter an answer."
   name = gets.chomp
 end
 
 puts "How loud is the hamster on a scale of 1-10?"
 vol_lvl = gets.chomp
 
-
-until vol_lvl != ""
-  puts "Please enter an answer"
+until vol_lvl.to_i>0 && vol_lvl.to_i<11
+  puts "Please enter a value between 1-10."
   vol_lvl = gets.chomp
 end
 
 puts "What color is the hamster's fur?"
-fur_color = gets.chomp
+fur_color = gets.chomp.downcase
 
 puts "Is the hamster is a good candidate for adoption? (y/n)"
 adoptable = gets.chomp
