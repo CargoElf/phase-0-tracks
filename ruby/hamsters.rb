@@ -18,4 +18,6 @@ if age = ""
 end
 
 vol_lvl = vol_lvl.to_i
-age = age.to_i
+if age != nil
+  age = age.to_i
+end
