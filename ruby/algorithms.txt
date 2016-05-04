@@ -54,9 +54,15 @@
 
 ****Cat Morning Feeding****
 - Get out of bed.
-- Check if Amanda is awake.
-  - If Amanda is awake.
-    - Ask "Have the cats been fed?"
+- If Amanda is in the apartment
+  - Check if Amanda is awake.
+    - If Amanda is awake.
+      - Ask "Have the cats been fed?"
+        - If Amanda responds in the affirmative.
+          - Do not feed the cats.
+- If Amanda is not in the apartment
+  - If she was in the apartment earlier during the current day.
+    - Text Amanda "Have the cats been fed?"
       - If Amanda responds in the affirmative.
         - Do not feed the cats.
 - Collect Kiki and Finn's bowls for wet food.
@@ -96,4 +102,8 @@
   - Place can in refrigerator.
 - Otherwise wash blue cap for can.
   - When cap is clean place it in drying rack.
-
+- If Amanda is in the apartment and awake.
+  - Triumphantly tell Amanda "I fed the cats!"
+- If Amanda is in the apartment and asleep.
+  - Wait until Amanda is awake.
+    - Triumphantly tell Amanda "I fed the cats!"
