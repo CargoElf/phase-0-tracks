@@ -67,6 +67,7 @@
       - Get new can of cat food from cabinet with cat supplies.
       - Get can opener from drawer with utensils.
       - Open can of cat food.
+      - Get blue cap to keep cat food fresh from utensil drawer
     - Otherwise remove blue cap that covers can from the top of the can.
       - Check to make sure that there is enough cat food for each cat to get one quarter of a can.
         - If there is not enough cat food.
@@ -86,6 +87,13 @@
 - Place Finn's food bowl in Finn's feeding area.
   - If Kiki is moving towards Finn's food
     - Hold Kiki's food bowl by her face so she can smell it.
-    - If Kiki does not move to her feeding area  
+    - If Kiki does not move to her feeding area .
       - Pick up Kiki with free hand.
       - Place Kiki in her feeding area.
+- Place Kiki's food bowl in her feeding area.
+- If food remains in a can.
+  - Snap blue freshness cap onto top of can.
+  - Place can in refrigerator.
+- Otherwise wash blue cap for can.
+  - When cap is clean place it in drying rack.
+
