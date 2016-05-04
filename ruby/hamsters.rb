@@ -34,6 +34,9 @@ if age != nil
   age = age.to_i
 end
 
+puts "This hamster is called #{name}."
+puts "On a scale of 1-10 in the loudness category, #{name} is a #{vol_lvl}."
+
 
       
 
