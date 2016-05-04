@@ -40,7 +40,7 @@ end
 puts "About how old is the hamster in years? Leave blank if not sure."
 age = gets.chomp
 
-until age.to_i>0 && age.to_i<20
+until age.to_i>0 && age.to_i<20 || age == ""
   puts "Please enter an age that makes sense! Preferably one that is a number, like 4."
   age = gets.chomp
 end
