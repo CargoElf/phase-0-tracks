@@ -61,6 +61,7 @@
         - Do not feed the cats.
 - Collect Kiki and Finn's bowls for wet food.
   - Place bowls on kitchen counter.
+  - Get small black handled spoon from utensil drawer.
   - Check refrigerator for open can of cat food.
     - If there is no can in refrigerator.
       - Get new can of cat food from cabinet with cat supplies.
@@ -73,9 +74,10 @@
           - Get can opener from drawer with utensils.
           - Open new can of cat food.
 - For each cat's bowl.
-  - Starting with any opened can with the least amount of food left. 
-    - Portion out one quarter of a can.
-    - If can has no food remaining.
-      - Rinse can.
-      - Crush can.
-      - Place can with recyclables.
+  - Starting with opened can with the least amount of food left. 
+    - Using black handled spoon
+    - portion out one quarter of a can.
+      - If can has no food remaining.
+        - Rinse can.
+        - Crush can.
+        - Place can with recyclables.
