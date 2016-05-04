@@ -25,6 +25,11 @@
 - If there is no one in front of the panel with the buttons for selecting floors, move in front of the panel.
   - Press the button corresponding to the floor you need to get to.
   - For each time someone gets on the elevator, ask them "What floor do you need?"
-    - Press the floor button corresponding to they're answer.
+    - Press the floor button corresponding to their answer.
+- Otherwise politely ask the person in front of the buttons to push the button corresponding with the floor you need.
+  - If they do not comply within three seconds, repeat the request slightly louder.
+    - If they do not comply, lightly tap on the shoulder and repeat your request.
+      - If they do not comply within three seconds, press the button corresponding to the floor you need. 
+
 
 
