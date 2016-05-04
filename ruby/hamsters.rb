@@ -17,5 +17,5 @@ if age = ""
   age = nil
 end
 
-vol_lvl = vol_lvl.in_i
-
+vol_lvl = vol_lvl.to_i
+age = age.to_i
