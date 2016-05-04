@@ -17,6 +17,11 @@ end
 puts "What color is the hamster's fur?"
 fur_color = gets.chomp.downcase
 
+until fur_color != ""
+  puts "Please enter an answer."
+  fur_color = gets.chomp
+end
+
 puts "Is the hamster is a good candidate for adoption? (y/n)"
 adoptable = gets.chomp
 
