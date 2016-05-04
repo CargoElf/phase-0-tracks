@@ -47,6 +47,13 @@ def decrypt(input_str)
   return input_str
 end
 
-puts "Please input a message."
-message = gets.chomp.downcase
-puts decrypt(message) 
+#puts "Please input a message."
+#message = gets.chomp.downcase
+#puts decrypt(message)
+
+# Bellow is an example of a nested call. What happens first is encrypt 
+# method is called and swordfish is encoded. The encoded value is then
+# returned to decrypt which then unscrambles the message. The unscrambled
+# method is then returned.
+
+puts decrypt(encrypt("swordfish")) 
