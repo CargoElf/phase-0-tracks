@@ -76,8 +76,16 @@
 - For each cat's bowl.
   - Starting with opened can with the least amount of food left. 
     - Using black handled spoon
-    - portion out one quarter of a can.
-      - If can has no food remaining.
-        - Rinse can.
-        - Crush can.
-        - Place can with recyclables.
+      - Portion out one quarter of a can.
+        - If can has no food remaining.
+          - Rinse can.
+          - Crush can.
+          - Place can with recyclables.
+      - Use spoon to smooth down cat food (so they don't eat too fast!)
+- Pick up both food bowls.
+- Place Finn's food bowl in Finn's feeding area.
+  - If Kiki is moving towards Finn's food
+    - Hold Kiki's food bowl by her face so she can smell it.
+    - If Kiki does not move to her feeding area  
+      - Pick up Kiki with free hand.
+      - Place Kiki in her feeding area.
