@@ -9,3 +9,7 @@
     -if someone holds the door for you, kindly say "Thank you." and enter the elevator. Otherwise stop in front of the elevator.
     -if the elevator door will close before you can enter and there is no one on it, stop in front of the elevator.
   -if the lighted arrow is pointing in the wrong direction, stop in front of the elevator.
+-Press the elevator call button corresponding with the direction the floor you need to go to is.
+-Step three feet back and wait for the elevator.
+-When the elevator doors open, check if the lighted arrow is pointing in the direction of the desired floor relative to you.
+  -Wait for any passengers trying to disembark.
