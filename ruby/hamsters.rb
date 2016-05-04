@@ -9,3 +9,8 @@ fur_color = gets.chomp
 
 puts "Is the hamster is a good candidate for adoption? (y/n)"
 adoptable = gets.chomp
+
+puts "About how old is the hamster in years?"
+age = gets.chomp
+
+
