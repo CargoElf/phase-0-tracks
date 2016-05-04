@@ -21,8 +21,11 @@
 def encrypt(input_str)
   i = 0
   while i < input_str.length
-    if input_str[i] != " "
-      input_str[i] = input_str[i].next
+    case true
+      when input_str[i] == "z"
+        input_str[i] = "a"
+      when input_str[i] != " "
+        input_str[i] = input_str[i].next
     end
     i += 1
   end
@@ -30,5 +33,6 @@ def encrypt(input_str)
 end
 
 puts "Please input a message."
-message = gets.chomp
+message = gets.chomp.downcase
 puts encrypt(message) 
+
