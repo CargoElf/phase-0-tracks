@@ -10,10 +10,22 @@ fur_color = gets.chomp
 puts "Is the hamster is a good candidate for adoption? (y/n)"
 adoptable = gets.chomp
 
+a = false
+while a == false
+  if adoptable.downcase == "y"
+  a = true
+  elsif adoptable.downcase == "n"
+    a = true
+  else
+    puts "Please enter a y or n."
+    adoptable = gets.chomp
+  end
+end
+
 puts "About how old is the hamster in years? Leave blank if not sure."
 age = gets.chomp
 
-if age = ""
+if age == ""
   age = nil
 end
 
@@ -21,3 +33,8 @@ vol_lvl = vol_lvl.to_i
 if age != nil
   age = age.to_i
 end
+
+
+      
+
+# Work done by Ben Van Sickle and Nick Olson
