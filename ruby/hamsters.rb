@@ -42,6 +42,12 @@ if adotable == "y"
 else
   puts "#{name} is ready for adoption yet."
 end
+
+if age == nil
+  puts "We're not sure how old #{name} is."
+else
+  puts "#{name} is #{age} years old."
+end
       
 
 # Work done by Ben Van Sickle and Nick Olson
