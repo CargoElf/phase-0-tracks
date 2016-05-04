@@ -37,7 +37,11 @@ end
 puts "This hamster is called #{name}."
 puts "On a scale of 1-10 in the loudness category, #{name} is a #{vol_lvl}."
 
-
+if adotable == "y"
+  puts "#{name} is a great candidate for adoption!"
+else
+  puts "#{name} is ready for adoption yet."
+end
       
 
 # Work done by Ben Van Sickle and Nick Olson
