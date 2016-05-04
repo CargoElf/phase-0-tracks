@@ -18,4 +18,17 @@
 #   - Else leave space unchanged
 =end
 
+def encrypt(input_str)
+  i = 0
+  while i < input_str.length
+    if input_str[i] != " "
+      input_str[i] = input_str[i].next
+    end
+    i += 1
+  end
+  return input_str
+end
 
+puts "Please input a message."
+message = gets.chomp
+puts encrypt(message) 
