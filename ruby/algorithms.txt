@@ -19,8 +19,8 @@
   - Wait for any passengers trying to disembark.
   - If the elevator is going in the direction of the desired floor, enter the elevator and face the panel with the buttons for selecting floors.
     - If there is someone approaching the elevator, ask "Do you need me to hold the door?"
-        - If they reply in the affirmative, hold the door.
-        - Otherwise let the door close.
+      - If they reply in the affirmative, hold the door.
+      - Otherwise let the door close.
   - Otherwise continue waiting.
 - If there is no one in front of the panel with the buttons for selecting floors, move in front of the panel.
   - Press the button corresponding to the floor you need to get to.
@@ -29,7 +29,13 @@
 - Otherwise politely ask the person in front of the buttons to push the button corresponding with the floor you need.
   - If they do not comply within three seconds, repeat the request slightly louder.
     - If they do not comply, lightly tap on the shoulder and repeat your request.
-      - If they do not comply within three seconds, press the button corresponding to the floor you need. 
+      - If they do not comply within three seconds, press the button corresponding to the floor you need.
+- For each time the elevator door opens while inside the elevator.
+  - Check to see if the current floor is the floor you need.
+    - If current floor is the correct floor
+      - Wait for other passengers to exit
+      - Exit the elevator and navigate to destination.
+    - Otherwise stay on elevator.
 
 
 
