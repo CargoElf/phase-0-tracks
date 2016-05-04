@@ -59,3 +59,16 @@
     - Ask "Have the cats been fed?"
       - If Amanda responds in the affirmative.
         - Do not feed the cats.
+- Collect Kiki and Finn's bowls for wet food.
+  - Place bowls on kitchen counter.
+  - Check refrigerator for open can of cat food.
+    - If there is no can in refrigerator.
+      - Get new can of cat food from cabinet with cat supplies.
+      - Get can opener from drawer with utensils.
+      - Open can of cat food.
+    - Otherwise remove blue cap that covers can from the top of the can.
+      - Check to make sure that there is enough cat food for each cat to get one quarter of a can.
+        - If there is not enough cat food.
+          - Get new can of cat food from cabinet with cat supplies.
+          - Get can opener from drawer with utensils.
+          - Open new can of cat food.
