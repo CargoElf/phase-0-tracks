@@ -1,0 +1,99 @@
+- Determine what floor you need to go to.
+- Determine what floor you are currently on.
+- Compare these two numbers and see if the floor you need to go to is above or below your current floor.
+- Approach the elevator door.
+- If the door is open 
+  -Look to see if lighted arrow is pointing in the direction of the desired floor relative to you.
+    - Wait for any passengers trying to disembark.
+    - If the lighted arrow is in the correct direction enter the elevator if possible.
+     - If the elevator door will close before you can enter and there are people on the elevator, kindly ask "Please hold the door."
+      - If someone holds the door for you, kindly say "Thank you."
+        - Enter the elevator and face the panel with the buttons for selecting the floor.
+      - Otherwise stop in front of the elevator.
+        - If there is someone approaching the elevator
+          - Ask "Do you need me to hold the door?"
+            - If they reply in the affirmative
+              - Hold the door until they enter.
+            - Otherwise let the door close.
+    - If the elevator door will close before you can enter and there is no one on it. 
+      - Stop in front of the elevator.
+  - If the lighted arrow is pointing in the wrong direction
+    - Stop in front of the elevator.
+- Otherwise press the elevator call button corresponding with the direction the floor you need to go to is in.
+  - Step three feet back and wait for the elevator.
+- For each time the elevator doors open
+  - Check if the lighted arrow is pointing in the direction of the desired floor relative to you.
+    - Wait for any passengers trying to disembark.
+  - If the elevator is going in the direction of the desired floor
+  - Enter the elevator and face the panel with the buttons for selecting floors.
+    - If there is someone approaching the elevator 
+      - Ask "Do you need me to hold the door?"
+        - If they reply in the affirmative, hold the door.
+        - Otherwise let the door close.
+  - Otherwise continue waiting.
+- If there is no one in front of the panel with the buttons for selecting floors
+  - Move in front of the panel.
+    - Press the button corresponding to the floor you need to get to.
+    - For each time someone gets on the elevator
+      - Ask them "What floor do you need?"
+        - Press the floor button corresponding to their answer.
+  - Otherwise politely ask the person in front of the buttons to push the button corresponding with the floor you need.
+    - If they do not comply within three seconds 
+      - Repeat the request slightly louder.
+        - If they do not comply within 3 seconds 
+          - Lightly tap on the shoulder and repeat your request.
+            - If they do not comply within three seconds 
+              - Press the button corresponding to the floor you need.
+- For each time the elevator door opens while inside the elevator.
+  - Check to see if the current floor is the floor you need.
+    - If current floor is the correct floor
+      - Wait for other passengers to exit
+      - Exit the elevator and navigate to destination.
+    - Otherwise stay on elevator.
+
+
+****Cat Morning Feeding****
+- Get out of bed.
+- Check if Amanda is awake.
+  - If Amanda is awake.
+    - Ask "Have the cats been fed?"
+      - If Amanda responds in the affirmative.
+        - Do not feed the cats.
+- Collect Kiki and Finn's bowls for wet food.
+  - Place bowls on kitchen counter.
+  - Get small black handled spoon from utensil drawer.
+  - Check refrigerator for open can of cat food.
+    - If there is no can in refrigerator.
+      - Get new can of cat food from cabinet with cat supplies.
+      - Get can opener from drawer with utensils.
+      - Open can of cat food.
+      - Get blue cap to keep cat food fresh from utensil drawer
+    - Otherwise remove blue cap that covers can from the top of the can.
+      - Check to make sure that there is enough cat food for each cat to get one quarter of a can.
+        - If there is not enough cat food.
+          - Get new can of cat food from cabinet with cat supplies.
+          - Get can opener from drawer with utensils.
+          - Open new can of cat food.
+- For each cat's bowl.
+  - Starting with opened can with the least amount of food left. 
+    - Using black handled spoon
+      - Portion out one quarter of a can.
+        - If can has no food remaining.
+          - Rinse can.
+          - Crush can.
+          - Place can with recyclables.
+      - Use spoon to smooth down cat food (so they don't eat too fast!)
+- Pick up both food bowls.
+- Place Finn's food bowl in Finn's feeding area.
+  - If Kiki is moving towards Finn's food
+    - Hold Kiki's food bowl by her face so she can smell it.
+    - If Kiki does not move to her feeding area .
+      - Pick up Kiki with free hand.
+      - Place Kiki in her feeding area.
+- Place Kiki's food bowl in her feeding area.
+- If food remains in a can.
+  - Snap blue freshness cap onto top of can.
+  - Place can in refrigerator.
+- Otherwise wash blue cap for can.
+  - When cap is clean place it in drying rack.
+
