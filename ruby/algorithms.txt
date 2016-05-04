@@ -52,4 +52,10 @@
     - Otherwise stay on elevator.
 
 
-
+****Cat Morning Feeding****
+- Get out of bed.
+- Check if Amanda is awake.
+  - If Amanda is awake.
+    - Ask "Have the cats been fed?"
+      - If Amanda responds in the affirmative.
+        - Do not feed the cats.
