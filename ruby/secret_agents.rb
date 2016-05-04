@@ -32,7 +32,21 @@ def encrypt(input_str)
   return input_str
 end
 
+def decrypt(input_str)
+  i = 0
+  while i < input_str.length
+    case true
+      when input_str[i] == "a"
+        input_str[i] = "z"
+      when input_str[i] != " "
+        ascii_num = input_str[i].ord - 1
+        input_str[i] = ascii_num.chr
+    end
+    i += 1
+  end
+  return input_str
+end
+
 puts "Please input a message."
 message = gets.chomp.downcase
-puts encrypt(message) 
-
+puts decrypt(message) 
