@@ -16,3 +16,6 @@ age = gets.chomp
 if age = ""
   age = nil
 end
+
+vol_lvl = vol_lvl.in_i
+
