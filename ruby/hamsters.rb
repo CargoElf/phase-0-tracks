@@ -1,8 +1,19 @@
 puts "What's the hamster's name?"
 name = gets.chomp
 
+until name != ""
+  puts "Please enter an answer"
+  name = gets.chomp
+end
+
 puts "How loud is the hamster on a scale of 1-10?"
 vol_lvl = gets.chomp
+
+
+until vol_lvl != ""
+  puts "Please enter an answer"
+  vol_lvl = gets.chomp
+end
 
 puts "What color is the hamster's fur?"
 fur_color = gets.chomp
@@ -37,10 +48,10 @@ end
 puts "This hamster is called #{name}."
 puts "On a scale of 1-10 in the loudness category, #{name} is a #{vol_lvl}."
 
-if adotable == "y"
+if adoptable == "y"
   puts "#{name} is a great candidate for adoption!"
 else
-  puts "#{name} is ready for adoption yet."
+  puts "#{name} is not ready for adoption yet."
 end
 
 if age == nil
