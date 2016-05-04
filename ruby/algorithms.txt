@@ -22,6 +22,9 @@
         - If they reply in the affirmative, hold the door.
         - Otherwise let the door close.
   - Otherwise continue waiting.
-  
+- If there is no one in front of the panel with the buttons for selecting floors, move in front of the panel.
+  - Press the button corresponding to the floor you need to get to.
+  - For each time someone gets on the elevator, ask them "What floor do you need?"
+    - Press the floor button corresponding to they're answer.
 
 
