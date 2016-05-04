@@ -1,0 +1,4 @@
+-Determine what floor you need to go to
+-Approach the elevator door
+  -if the door is open, look to see if lighted arrow is pointing in the direction of the desired floor relative to you.
+    -if the lighted arrow is in the correct direction enter the elevator if possible.
