@@ -2,34 +2,48 @@
 - Determine what floor you are currently on.
 - Compare these two numbers and see if the floor you need to go to is above or below your current floor.
 - Approach the elevator door.
-- If the door is open, look to see if lighted arrow is pointing in the direction of the desired floor relative to you.
-  - Wait for any passengers trying to disembark.
-  - If the lighted arrow is in the correct direction enter the elevator if possible.
-   - If the elevator door will close before you can enter and there are people on the elevator, kindly ask "Please hold the door."
-    - If someone holds the door for you, kindly say "Thank you." Enter the elevator and face the panel with the buttons for selecting the floor.
-    - Otherwise stop in front of the elevator.
-      - If there is someone approaching the elevator, ask "Do you need me to hold the door?"
+- If the door is open 
+  -Look to see if lighted arrow is pointing in the direction of the desired floor relative to you.
+    - Wait for any passengers trying to disembark.
+    - If the lighted arrow is in the correct direction enter the elevator if possible.
+     - If the elevator door will close before you can enter and there are people on the elevator, kindly ask "Please hold the door."
+      - If someone holds the door for you, kindly say "Thank you."
+        - Enter the elevator and face the panel with the buttons for selecting the floor.
+      - Otherwise stop in front of the elevator.
+        - If there is someone approaching the elevator
+          - Ask "Do you need me to hold the door?"
+            - If they reply in the affirmative
+              - Hold the door until they enter.
+            - Otherwise let the door close.
+    - If the elevator door will close before you can enter and there is no one on it. 
+      - Stop in front of the elevator.
+  - If the lighted arrow is pointing in the wrong direction
+    - Stop in front of the elevator.
+- Otherwise press the elevator call button corresponding with the direction the floor you need to go to is in.
+  - Step three feet back and wait for the elevator.
+- For each time the elevator doors open
+  - Check if the lighted arrow is pointing in the direction of the desired floor relative to you.
+    - Wait for any passengers trying to disembark.
+  - If the elevator is going in the direction of the desired floor
+  - Enter the elevator and face the panel with the buttons for selecting floors.
+    - If there is someone approaching the elevator 
+      - Ask "Do you need me to hold the door?"
         - If they reply in the affirmative, hold the door.
         - Otherwise let the door close.
-    - If the elevator door will close before you can enter and there is no one on it, stop in front of the elevator.
-  - If the lighted arrow is pointing in the wrong direction, stop in front of the elevator.
-- Otherwise press the elevator call button corresponding with the direction the floor you need to go to is.
-  - Step three feet back and wait for the elevator.
-- For each time the elevator doors open, check if the lighted arrow is pointing in the direction of the desired floor relative to you.
-  - Wait for any passengers trying to disembark.
-  - If the elevator is going in the direction of the desired floor, enter the elevator and face the panel with the buttons for selecting floors.
-    - If there is someone approaching the elevator, ask "Do you need me to hold the door?"
-      - If they reply in the affirmative, hold the door.
-      - Otherwise let the door close.
   - Otherwise continue waiting.
-- If there is no one in front of the panel with the buttons for selecting floors, move in front of the panel.
-  - Press the button corresponding to the floor you need to get to.
-  - For each time someone gets on the elevator, ask them "What floor do you need?"
-    - Press the floor button corresponding to their answer.
-- Otherwise politely ask the person in front of the buttons to push the button corresponding with the floor you need.
-  - If they do not comply within three seconds, repeat the request slightly louder.
-    - If they do not comply, lightly tap on the shoulder and repeat your request.
-      - If they do not comply within three seconds, press the button corresponding to the floor you need.
+- If there is no one in front of the panel with the buttons for selecting floors
+  - Move in front of the panel.
+    - Press the button corresponding to the floor you need to get to.
+    - For each time someone gets on the elevator
+      - Ask them "What floor do you need?"
+        - Press the floor button corresponding to their answer.
+  - Otherwise politely ask the person in front of the buttons to push the button corresponding with the floor you need.
+    - If they do not comply within three seconds 
+      - Repeat the request slightly louder.
+        - If they do not comply within 3 seconds 
+          - Lightly tap on the shoulder and repeat your request.
+            - If they do not comply within three seconds 
+              - Press the button corresponding to the floor you need.
 - For each time the elevator door opens while inside the elevator.
   - Check to see if the current floor is the floor you need.
     - If current floor is the correct floor
