@@ -1,3 +1,4 @@
+# validates y n input
 def yesno(y_n)
   until y_n == "y" || y_n == "n"
     puts "Enter y or n."
@@ -6,39 +7,61 @@ def yesno(y_n)
   return y_n
 end
 
-name = ""
-until name  != ""
-  puts "What is your name?"
-  name = gets.chomp
+num_employees = 0
+while num_employees < 1
+  puts "How many employees do you wish to process?"
+  num_employees = gets.chomp.to_i
 end
 
-age = ""
-until age != "" && age > 0
-  puts "How old are you?"
-  age = gets.chomp.to_i
-end
+init_num = num_employees
 
-year_ob = ""
-until year_ob != "" && year_ob.to_i <= Time.new.year
-  puts "What year were you born?"
-  year_ob = gets.chomp
-end
-year_ob = year_ob.to_i
+while num_employees > 0
+  remaining = num_employees - 1
+  if init_num == num_employees
+    puts "Processing the first employee."
+    puts "#{remaining} employees left to process"
+  elsif num_employees == 1
+    puts "Last employee to be processed!"
+  else
+    puts "#{remaining} employees left to process"
+  end
 
-puts "Our company cafeteria serves garlic bread. Should we order some for you? (y/n)"
-garlic_bread = yesno(garlic_bread)
+  name = ""
+  until name  != ""
+    puts "What is your name?"
+    name = gets.chomp
+  end
 
-puts "Would you like to enroll in the company's health insurance? (y/n)"
-insurance = yesno(insurance)
+  age = ""
+  until age != "" && age > 0
+    puts "How old are you?"
+    age = gets.chomp.to_i
+  end
 
-if name == "Drake Cula" || name == "Tu Fang"
-  puts "Definitely a vampire."
-elsif (year_ob + age >= Time.new.year - 1) && (garlic_bread == "y" || insurance == "y")
-  puts "Probably not a vampire."
-elsif (year_ob + age < Time.new.year - 1) && (garlic_bread == "n" && insurance == "n")
-  puts "Almost certainly a vampire."
-elsif (year_ob + age < Time.new.year - 1) && (garlic_bread != "y" || insurance != "y")
-  puts "Probably a vampire." 
-else
-  puts "Results inconclusive."
+  year_ob = ""
+  until year_ob != "" && year_ob.to_i <= Time.new.year
+    puts "What year were you born?"
+    year_ob = gets.chomp
+  end
+  year_ob = year_ob.to_i
+
+  puts "Our company cafeteria serves garlic bread. Should we order some for you? (y/n)"
+  garlic_bread = yesno(garlic_bread)
+
+  puts "Would you like to enroll in the company's health insurance? (y/n)"
+  insurance = yesno(insurance)
+
+  if name == "Drake Cula" || name == "Tu Fang"
+    puts "Definitely a vampire."
+  elsif (year_ob + age >= Time.new.year - 1) && (garlic_bread == "y" || insurance == "y")
+    puts "Probably not a vampire."
+  elsif (year_ob + age < Time.new.year - 1) && (garlic_bread == "n" && insurance == "n")
+    puts "Almost certainly a vampire."
+  elsif (year_ob + age < Time.new.year - 1) && (garlic_bread != "y" || insurance != "y")
+    puts "Probably a vampire." 
+  else
+    puts "Results inconclusive."
+  end
+
+  num_employees -= 1
 end
