@@ -1,7 +1,8 @@
 # validates y n input
 def yesno(y_n)
+  y_n = nil
   until y_n == "y" || y_n == "n"
-    puts "Enter y or n."
+    puts "y/n"
     y_n = gets.chomp
   end
   return y_n
@@ -39,16 +40,16 @@ while num_employees > 0
   end
 
   year_ob = ""
-  until year_ob != "" && year_ob.to_i <= Time.new.year
+  until year_ob.to_i <= Time.new.year
     puts "What year were you born?"
     year_ob = gets.chomp
   end
   year_ob = year_ob.to_i
 
-  puts "Our company cafeteria serves garlic bread. Should we order some for you? (y/n)"
+  puts "Our company cafeteria serves garlic bread. Should we order some for you?"
   garlic_bread = yesno(garlic_bread)
 
-  puts "Would you like to enroll in the company's health insurance? (y/n)"
+  puts "Would you like to enroll in the company's health insurance?"
   insurance = yesno(insurance)
 
   if name == "Drake Cula" || name == "Tu Fang"
