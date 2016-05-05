@@ -14,7 +14,6 @@ puts "Would you like to enroll in the company's health insurance? (y/n)"
 insuracne = gets.chomp[0].downcase
 
 
-
-if (year_ob.to_i + age.to_i == Time.new.year - 1 || Time.new.year) && (garlic_bread == "y" || insuracne == "y")
+if (year_ob.to_i + age.to_i <= Time.new.year - 1) && (garlic_bread == "y" || insuracne == "y")
   puts "Probably not a vampire"
 end
