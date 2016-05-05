@@ -1,10 +1,14 @@
-puts "What is your name?"
-name = gets.chomp
+name = ""
+until name  != ""
+  puts "What is your name?"
+  name = gets.chomp
+end
 
-puts name
-
-puts "How old are you?"
-age = gets.chomp.to_i
+age = ""
+until age != "" && age > 0
+  puts "How old are you?"
+  age = gets.chomp.to_i
+end
 
 puts"What year year were you born?"
 year_ob = gets.chomp.to_i
