@@ -39,7 +39,7 @@ while num_employees > 0
     age = gets.chomp.to_i
   end
 
-  year_ob = ""
+  year_ob = Time.new.year + 1
   until year_ob.to_i <= Time.new.year
     puts "What year were you born?"
     year_ob = gets.chomp
