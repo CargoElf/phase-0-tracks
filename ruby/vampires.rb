@@ -11,13 +11,12 @@ puts "Our company cafeteria serves garlic bread. Should we order some for you? (
 garlic_bread = gets.chomp
 
 puts "Would you like to enroll in the company's health insurance? (y/n)"
-insuracne = gets.chomp[0].downcase
+insurance = gets.chomp[0].downcase
 
-if (year_ob + age >= Time.new.year - 1) && (garlic_bread == "y" || insuracne == "y")
+if (year_ob + age >= Time.new.year - 1) && (garlic_bread == "y" || insurance == "y")
   puts "Probably not a vampire."
 elsif (year_ob + age < Time.new.year - 1) && (garlic_bread != "y" || insurance != "y")
-  puts "Probably a vampire." 
-elsif (year_ob + age < Time.new.year - 1) && (garlic_bread != "y" && insurance != "y")
+  puts "Probably a vampire." unless (year_ob + age < Time.new.year - 1) && (garlic_bread != "y" && insurance != "y")
   puts "Almost certainly a vampire."
 else
   puts "Results inconclusive."
