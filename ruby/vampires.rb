@@ -21,10 +21,16 @@ while num_employees > 0
   if init_num == num_employees
     puts "Processing the first employee."
     puts "#{remaining} employees left to process"
+    puts ""
+  elsif num_employees == 2
+    puts "1 employee remaining."
+    puts ""
   elsif num_employees == 1
     puts "Last employee to be processed!"
+    puts ""
   else
     puts "#{remaining} employees left to process"
+    puts ""
   end
 
   name = ""
@@ -63,6 +69,7 @@ while num_employees > 0
   else
     puts "Results inconclusive."
   end
+  puts ""
 
   num_employees -= 1
 end
