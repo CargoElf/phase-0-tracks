@@ -69,7 +69,7 @@ while num_employees > 0
 
   if name == "Drake Cula" || name == "Tu Fang"
     puts "Definitely a vampire."
-  elsif (year_ob + age >= Time.new.year - 1) && (garlic_bread == "y" || insurance == "y")
+  elsif (year_ob + age == Time.new.year - 1 || year_ob + age == Time.new.year) && (garlic_bread == "y" || insurance == "y")
     puts "Probably not a vampire."
   elsif (year_ob + age < Time.new.year - 1) && (garlic_bread == "n" && insurance == "n")
     puts "Almost certainly a vampire."
