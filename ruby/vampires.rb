@@ -47,6 +47,13 @@ while num_employees > 0
   puts "Would you like to enroll in the company's health insurance?"
   insurance = yesno(insurance)
 
+  #checks age against year of birth
+  if year_ob + age == current_y || year_ob + age == current_y - 1
+    age_check = true
+  else
+    age_check = false
+  end
+
   allergies = ""
   puts "Do you have any allergies? List the one at a time."
   puts "If you don't have any or are finished listing them, type done."
@@ -54,8 +61,7 @@ while num_employees > 0
     puts "Enter another or enter 'done' if you are finished."  
     allergies = gets.chomp.downcase
     if allergies == "sunshine"
-      age = 0
-      year_ob = current_y * 2
+      age_check = false
       name = ""
       garlic_bread = "y"
       insurance = "n"
@@ -67,11 +73,11 @@ while num_employees > 0
 
   if name == "Drake Cula" || name == "Tu Fang"
     puts "Definitely a vampire."
-  elsif (year_ob + age == current_y - 1 || year_ob + age == current_y) && (garlic_bread == "y" || insurance == "y")
+  elsif age_check && (garlic_bread == "y" || insurance == "y")
     puts "Probably not a vampire."
-  elsif (year_ob + age < current_y - 1) && (garlic_bread == "n" && insurance == "n")
+  elsif !age_check && (garlic_bread == "n" && insurance == "n")
     puts "Almost certainly a vampire."
-  elsif (year_ob + age < current_y - 1) && (garlic_bread != "y" || insurance != "y")
+  elsif !age_check && (garlic_bread != "y" || insurance != "y")
     puts "Probably a vampire." 
   else
     puts "Results inconclusive."
