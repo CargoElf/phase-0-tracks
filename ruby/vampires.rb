@@ -9,7 +9,7 @@ def yesno(y_n)
 end
 
 
-#Sets number of times the loop will run
+#Sets number of times the loop will run. Must be more than 0
 num_employees = 0
 while num_employees < 1
   puts "How many employees do you wish to process?"
@@ -18,10 +18,9 @@ end
 
 current_y = Time.new.year
 
+#loops a number of times equal to num_employees to process
 while num_employees > 0
-  remaining = num_employees - 1
-
-#loops until name is not blank
+  #loops until name is not blank
   name = ""
   until name  != ""
     puts "What is your name?"
@@ -56,6 +55,8 @@ while num_employees > 0
     age_check = false
   end
 
+  #Loop stops with input of done or sunshine. If sunshine it sets vars to
+  #trigger "Probably a vampire"
   allergies = ""
   puts "Do you have any allergies? List the one at a time."
   puts "If you don't have any or are finished listing them, type done."
@@ -88,12 +89,13 @@ while num_employees > 0
 
   num_employees -= 1
 
+  #counts down the number of employees remaining.
   if num_employees == 1
     puts "Last employee to be processed!"
     puts ""
   elsif num_employees ==0
   else
-    puts "#{remaining} employees left to process"
+    puts "#{num_employees} employees left to process"
     puts ""
   end
 end
