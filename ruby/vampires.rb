@@ -17,12 +17,10 @@ end
 
 init_num = num_employees
 
+current_y = Time.new.year
+
 while num_employees > 0
   remaining = num_employees - 1
-  if init_num == num_employees
-    puts "Processing the first employee."
-    puts ""
-  end
 
   name = ""
   until name  != ""
@@ -52,16 +50,15 @@ while num_employees > 0
   allergies = ""
   puts "Do you have any allergies? List the one at a time."
   puts "If you don't have any or are finished listing them, type done."
-  until allergies == "done"
+  until allergies == "done" || allergies == "sunshine"
     puts "Enter another or enter 'done' if you are finished."  
     allergies = gets.chomp.downcase
     if allergies == "sunshine"
       age = 0
-      year_ob = Time.new.year * 2
+      year_ob = current_y * 2
       name = ""
       garlic_bread = "y"
       insurance = "n"
-      break
     else
       puts ""
     end
@@ -70,16 +67,18 @@ while num_employees > 0
 
   if name == "Drake Cula" || name == "Tu Fang"
     puts "Definitely a vampire."
-  elsif (year_ob + age == Time.new.year - 1 || year_ob + age == Time.new.year) && (garlic_bread == "y" || insurance == "y")
+  elsif (year_ob + age == current_y - 1 || year_ob + age == current_y) && (garlic_bread == "y" || insurance == "y")
     puts "Probably not a vampire."
-  elsif (year_ob + age < Time.new.year - 1) && (garlic_bread == "n" && insurance == "n")
+  elsif (year_ob + age < current_y - 1) && (garlic_bread == "n" && insurance == "n")
     puts "Almost certainly a vampire."
-  elsif (year_ob + age < Time.new.year - 1) && (garlic_bread != "y" || insurance != "y")
+  elsif (year_ob + age < current_y - 1) && (garlic_bread != "y" || insurance != "y")
     puts "Probably a vampire." 
   else
     puts "Results inconclusive."
   end
   puts ""
+
+  num_employees -= 1
 
   if num_employees == 2
     puts "1 employee remaining."
@@ -91,6 +90,4 @@ while num_employees > 0
     puts "#{remaining} employees left to process"
     puts ""
   end
-
-  num_employees -= 1
 end
