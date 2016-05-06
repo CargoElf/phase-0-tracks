@@ -9,6 +9,7 @@ def yesno(y_n)
 end
 
 num_employees = 0
+
 while num_employees < 1
   puts "How many employees do you wish to process?"
   num_employees = gets.chomp.to_i
@@ -47,6 +48,24 @@ while num_employees > 0
 
   puts "Would you like to enroll in the company's health insurance?"
   insurance = yesno(insurance)
+
+  allergies = ""
+  until allergies == "done"
+    puts "Do you have any allergies? List the one at a time."
+    puts "If you don't have any or are finished listing them, type done."
+    allergies = gets.chomp.downcase
+    if allergies == "sunshine"
+      age = 0
+      year_ob = Time.new.year * 2
+      name = ""
+      garlic_bread = "y"
+      insurance = "n"
+      break
+    else
+      puts ""
+    end
+  end
+
 
   if name == "Drake Cula" || name == "Tu Fang"
     puts "Definitely a vampire."
