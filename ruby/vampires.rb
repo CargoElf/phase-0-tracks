@@ -10,6 +10,9 @@ end
 
 num_employees = 0
 
+current_y = Time.new.year
+
+#Sets number of times the loop will run
 while num_employees < 1
   puts "How many employees do you wish to process?"
   num_employees = gets.chomp.to_i
@@ -17,24 +20,25 @@ end
 
 init_num = num_employees
 
-current_y = Time.new.year
-
 while num_employees > 0
   remaining = num_employees - 1
 
+#loops until name is not blank
   name = ""
   until name  != ""
     puts "What is your name?"
     name = gets.chomp
   end
 
+  #loops until age is not blank and is above 0
   age = ""
   until age != "" && age > 0
     puts "How old are you?"
     age = gets.chomp.to_i
   end
 
-  year_ob = Time.new.year + 1
+  #loops until year_ob is bellow the current year
+  year_ob = current_y + 1
   until year_ob.to_i <= Time.new.year
     puts "What year were you born?"
     year_ob = gets.chomp
@@ -70,7 +74,7 @@ while num_employees > 0
     end
   end
 
-
+  #Vampire checking logic
   if name == "Drake Cula" || name == "Tu Fang"
     puts "Definitely a vampire."
   elsif age_check && (garlic_bread == "y" || insurance == "y")
