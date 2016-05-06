@@ -8,17 +8,15 @@ def yesno(y_n)
   return y_n
 end
 
-num_employees = 0
-
-current_y = Time.new.year
 
 #Sets number of times the loop will run
+num_employees = 0
 while num_employees < 1
   puts "How many employees do you wish to process?"
   num_employees = gets.chomp.to_i
 end
 
-init_num = num_employees
+current_y = Time.new.year
 
 while num_employees > 0
   remaining = num_employees - 1
@@ -90,12 +88,10 @@ while num_employees > 0
 
   num_employees -= 1
 
-  if num_employees == 2
-    puts "1 employee remaining."
-    puts ""
-  elsif num_employees == 1
+  if num_employees == 1
     puts "Last employee to be processed!"
     puts ""
+  elsif num_employees ==0
   else
     puts "#{remaining} employees left to process"
     puts ""
