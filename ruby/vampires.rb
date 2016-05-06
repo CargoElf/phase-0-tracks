@@ -37,7 +37,7 @@ while num_employees > 0
 
   #loops until year_ob is bellow the current year
   year_ob = current_y + 1
-  until year_ob.to_i <= Time.new.year
+  until year_ob.to_i <= current_y
     puts "What year were you born?"
     year_ob = gets.chomp
   end
