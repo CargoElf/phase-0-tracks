@@ -50,9 +50,10 @@ while num_employees > 0
   insurance = yesno(insurance)
 
   allergies = ""
+  puts "Do you have any allergies? List the one at a time."
+  puts "If you don't have any or are finished listing them, type done."
   until allergies == "done"
-    puts "Do you have any allergies? List the one at a time."
-    puts "If you don't have any or are finished listing them, type done."
+    puts "Enter another or enter 'done' if you are finished."  
     allergies = gets.chomp.downcase
     if allergies == "sunshine"
       age = 0
