@@ -58,7 +58,7 @@ while num_employees > 0
   #Loop stops with input of done or sunshine. If sunshine it sets vars to
   #trigger "Probably a vampire"
   allergies = ""
-  puts "Do you have any allergies?"
+  puts "Do you have any allergies? List them one at a time."
   until allergies == "done" || allergies == "sunshine"
     puts "Enter 'done' if you are finished."  
     allergies = gets.chomp.downcase
