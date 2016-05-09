@@ -8,6 +8,7 @@
 # => “InVeStIgAtIoN”
 
 "zom".insert(1, "o")
+"zom".gsub("o", "oo")
 # => “zoom”
 
 "enhance".center(15)
@@ -32,6 +33,7 @@
 # => "he mystery of the missing first letter"
 
 "Elementary,    my   dear        Watson!".squeeze(" ")
+"Elementary,    my   dear        Watson!".gsub(/ +/, " ")
 # => "Elementary, my dear Watson!" 2,3,7
 
 "z".ord
