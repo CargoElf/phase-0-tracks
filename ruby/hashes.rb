@@ -27,3 +27,8 @@ puts "How old is the client?"
 client_details[:age] = gets.chomp.to_i
 
 puts client_details[:age] + 0
+
+puts "How many children does the client have?"
+client_details[:num_children] = gets.chomp.to_i
+
+puts client_details[:num_children] + 0
