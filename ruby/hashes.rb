@@ -37,3 +37,17 @@ puts "What is the client's preferred decor theme?"
 client_details[:decor_theme] = gets.chomp
 
 puts client_details[:decor_theme]
+
+puts "Does the client like modern design? (y/n)"
+y_n = nil
+until y_n == "y" || y_n == "n"
+  y_n = gets.chomp
+  if y_n == "y"
+    client_details[:like_modernism] = true
+  elsif y_n == "n"
+    client_details[:like_modernism] = false
+  end
+end
+
+puts client_details[:like_modernism]
+
