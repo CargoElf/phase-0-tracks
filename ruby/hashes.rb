@@ -61,4 +61,18 @@ else
   puts "Client doesn't like modern design!"
 end
 
-
+puts "Did you want to change any input? Enter what to change now. If not enter 'done'."
+answer = gets.chomp
+if answer != "done"
+  puts "Please enter the new value."
+  client_details[answer.to_sym] = gets.chomp
+  puts "Client Name: #{client_details[:name]}"
+  puts "Age: #{client_details[:age]}"
+  puts "Number of Children: #{client_details[:num_children]}"
+  puts "Decor Theme: #{client_details[:decor_theme]}"
+  if client_details[:like_modernism] == true
+    puts "Client likes modern design!"
+  else
+    puts "Client doesn't like modern design!"
+  end
+end
