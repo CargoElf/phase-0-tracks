@@ -42,8 +42,8 @@ until y_n == "y" || y_n == "n"
 end
 
 puts "Client Name: #{client_details[:name]}"
-puts "Age: #{client_details[:age]}"
-puts "Number of Children: #{client_details[:num_children]}"
+puts "Age: #{client_details[:age].to_i}"
+puts "Number of Children: #{client_details[:num_children].to_i}"
 puts "Decor Theme: #{client_details[:decor_theme]}"
 if client_details[:like_modernism] == true
   puts "Client likes modern design!"
@@ -56,6 +56,7 @@ answer = gets.chomp
 if answer != "done"
   puts "Please enter the new value."
   client_details[answer.to_sym] = gets.chomp
+
   puts "Client Name: #{client_details[:name]}"
   puts "Age: #{client_details[:age]}"
   puts "Number of Children: #{client_details[:num_children]}"
