@@ -70,6 +70,13 @@ if answer != "done"
   puts "Age: #{client_details[:age]}"
   puts "Number of Children: #{client_details[:num_children]}"
   puts "Decor Theme: #{client_details[:decor_theme]}"
+
+  if client_details[:like_modernism] == "y"
+    client_details[:like_modernism] = true
+  elsif client_details[:like_modernism] == "n"
+    client_details[:like_modernism] = false
+  end
+
   if client_details[:like_modernism] == true
     puts "Client likes modern design!"
   else
