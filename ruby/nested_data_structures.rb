@@ -8,29 +8,29 @@ highway = {
     ],
     cargo: [ "Apples", "Beer", "Boccie Ball"
     ]
-  }
+  },
   semi_truck: {
     driver: "Big Jim",
     cargo: [ "Slim Jims", "Sparkling Wine", "Cheez-its"
     ]
-  }
+  },
   motorcycle: {
     motorcycle_type: "Honda",
-    engin_size: "500cc" 
+    engin_size: "500cc",
     driver: "Tony"
-  }
+  },
   blue_car: {
     car_type: "Honda",
     car_size: "Compact",
     num_doors: 2,
-    driver: "Sue"
+    driver: "Sue",
     passengers: [ "John", "Alex"
     ],
     cargo: [ "Beach Blanket", "Beach Umbrella", "Beach Ball", "Frisbee"
     ]
-  }
+  },
   ambulance: { 
-    driver: "Ann"
+    driver: "Ann",
     emts: [ "Judy", "Luis", "April"
     ],
     patient: {
@@ -43,3 +43,7 @@ highway = {
 }
 
 puts highway[:red_car][:car_type]
+puts highway[:semi_truck][:cargo][1]
+puts highway[:ambulance][:patient][:emergency_contacts][-1]
+puts highway[:blue_car][:cargo].reverse.last
+puts highway[:red_car][:passengers].last
