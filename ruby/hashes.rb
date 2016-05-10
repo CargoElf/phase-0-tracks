@@ -32,3 +32,8 @@ puts "How many children does the client have?"
 client_details[:num_children] = gets.chomp.to_i
 
 puts client_details[:num_children] + 0
+
+puts "What is the client's preferred decor theme?"
+client_details[:decor_theme] = gets.chomp
+
+puts client_details[:decor_theme]
