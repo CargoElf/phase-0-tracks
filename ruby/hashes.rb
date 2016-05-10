@@ -38,9 +38,9 @@ client_details[:decor_theme] = gets.chomp
 
 puts client_details[:decor_theme]
 
-puts "Does the client like modern design? (y/n)"
 y_n = nil
 until y_n == "y" || y_n == "n"
+  puts "Does the client like modern design? (y/n)"
   y_n = gets.chomp
   if y_n == "y"
     client_details[:like_modernism] = true
@@ -50,4 +50,15 @@ until y_n == "y" || y_n == "n"
 end
 
 puts client_details[:like_modernism]
+
+puts "Client Name: #{client_details[:name]}"
+puts "Age: #{client_details[:age]}"
+puts "Number of Children: #{client_details[:num_children]}"
+puts "Decor Theme: #{client_details[:decor_theme]}"
+if client_details[:like_modernism] == true
+  puts "Client likes modern design!"
+else
+  puts "Client doesn't like modern design!"
+end
+
 
