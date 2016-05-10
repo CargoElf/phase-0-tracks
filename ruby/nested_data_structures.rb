@@ -20,12 +20,13 @@ highway = {
     driver: "Tony"
   }
   blue_car: {
-    car_type: ,
-    car_size: ,
-    num_doors: ,
-    passengers: [
+    car_type: "Honda",
+    car_size: "Compact",
+    num_doors: 2,
+    driver: "Sue"
+    passengers: [ "John", "Alex"
     ],
-    cargo: [
+    cargo: [ "Beach Blanket", "Beach Umbrella", "Beach Ball", "Frisbee"
     ]
   }
   __car: {
