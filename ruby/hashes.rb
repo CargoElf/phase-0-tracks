@@ -11,10 +11,14 @@ Display the hash.a
 =end
 
 client_details = {
-  name:
-  age:
-  num_children:
-  decor_theme:
-  like_modernism:
+  name: nil,
+  age: nil,
+  num_children: nil,
+  decor_theme: nil,
+  like_modernism: nil,
 }
 
+puts "What is the client's name?"
+client_details[:name] = gets.chomp
+
+puts client_details[:name]
