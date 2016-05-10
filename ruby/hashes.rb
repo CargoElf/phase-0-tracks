@@ -22,3 +22,8 @@ puts "What is the client's name?"
 client_details[:name] = gets.chomp
 
 puts client_details[:name]
+
+puts "How old is the client?"
+client_details[:age] = gets.chomp.to_i
+
+puts client_details[:age] + 0
