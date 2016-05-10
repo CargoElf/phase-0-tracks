@@ -7,4 +7,14 @@ Display the hash after all values have been assigned.
 Prompt user for any changes needed any one key value.
   Get key name
   Get new value and update hash
-Display the hash.
+Display the hash.a
+=end
+
+client_details = {
+  name:
+  age:
+  num_children:
+  decor_theme:
+  like_modernism:
+}
+
