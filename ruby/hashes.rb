@@ -21,22 +21,14 @@ client_details = {
 puts "What is the client's name?"
 client_details[:name] = gets.chomp
 
-puts client_details[:name]
-
 puts "How old is the client?"
 client_details[:age] = gets.chomp.to_i
-
-puts client_details[:age] + 0
 
 puts "How many children does the client have?"
 client_details[:num_children] = gets.chomp.to_i
 
-puts client_details[:num_children] + 0
-
 puts "What is the client's preferred decor theme?"
 client_details[:decor_theme] = gets.chomp
-
-puts client_details[:decor_theme]
 
 y_n = nil
 until y_n == "y" || y_n == "n"
@@ -48,8 +40,6 @@ until y_n == "y" || y_n == "n"
     client_details[:like_modernism] = false
   end
 end
-
-puts client_details[:like_modernism]
 
 puts "Client Name: #{client_details[:name]}"
 puts "Age: #{client_details[:age]}"
