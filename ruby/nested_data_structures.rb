@@ -29,14 +29,16 @@ highway = {
     cargo: [ "Beach Blanket", "Beach Umbrella", "Beach Ball", "Frisbee"
     ]
   }
-  __car: {
-    car_type: ,
-    car_size: ,
-    num_doors: ,
-    passengers: [
+  ambulance: { 
+    driver: "Ann"
+    emts: [ "Judy", "Luis", "April"
     ],
-    cargo: [
-    ]
+    patient: {
+      name: "Bill Smith",
+      emergency: "hang gliding accident",
+      emergency_contacts: [ "Rachelle", "Sue"
+      ]
+    }
   }
 }
 
