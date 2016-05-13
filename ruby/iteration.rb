@@ -53,3 +53,16 @@ p array2
 
 puts hash2.delete_if {|key, value| key == 3}
 p hash2
+
+array2 = [1,2,3,4,5,6,7,8]
+hash2 = { 1 => "cat", 2 => "dog", 3 => "fish", 4 => "frog", 5 => "snake"}
+
+
+puts array2.keep_if {|x| x > 5}
+p array2
+
+puts hash2.keep_if {|number, animal| number <= 2}
+p hash2
+
+array2 = [1,2,3,4,5,6,7,8]
+hash2 = { 1 => "cat", 2 => "dog", 3 => "fish", 4 => "frog", 5 => "snake"}
