@@ -13,14 +13,21 @@ def name_swap(name)
   puts full_name = name.split(" ")
   first_name = full_name.shift
   last_name = full_name.join(" ")
-  full_name = "#{last_name} #{first_name}"
+  full_name = "#{last_name} #{first_name}".split(" ")
 end
 
 def vowel_incr(name)
-  vowels = "aeiou"
+  vowels = "aeioua"
+  name.map! do |i|
+    if i == vowels.split[i].times
+      name = vowels[i+1]
+    end
+  end
+end
 
-def consonant_incr(name)  
-  consonants = "bcdfghjklmnpqrstvwxyz"
+
+#def consonant_incr(name)  
+#  consonants = "bcdfghjklmnpqrstvwxyz"
 
 agent_name = "Ben Van Sickle"
-puts name_swap(agent_name)
+puts vowel_incr(name_swap(agent_name))
