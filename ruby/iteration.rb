@@ -70,4 +70,5 @@ hash2 = { 1 => "cat", 2 => "dog", 3 => "fish", 4 => "frog", 5 => "snake"}
 puts array2.take(3)
 p array2
 
-puts hash2
+puts hash2.select {|number, animal| animal == "fish"}
+p hash2
