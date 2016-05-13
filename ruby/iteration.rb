@@ -66,3 +66,8 @@ p hash2
 
 array2 = [1,2,3,4,5,6,7,8]
 hash2 = { 1 => "cat", 2 => "dog", 3 => "fish", 4 => "frog", 5 => "snake"}
+
+puts array2.take(3)
+p array2
+
+puts hash2
