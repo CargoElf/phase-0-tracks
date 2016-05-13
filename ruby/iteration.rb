@@ -10,7 +10,6 @@
 
 #name { |user_input| puts "Your name is #{user_input}."}
 
-=begin
 # Release 1
 # Array with .each iteration
 array = [9, 'hi', 'yes', 19]
@@ -41,7 +40,7 @@ end
 
 puts "Our after .each method call for a hash:"
 p soccer_cities
-=end
+
 
 #Release 2
 
@@ -78,3 +77,6 @@ hash2 = { 1 => "cat", 2 => "dog", 3 => "fish", 4 => "frog", 5 => "snake"}
 
 puts array2.drop_while {|i| i < 4}
 p array2
+
+puts hash2.drop_while {|number, animal| number <4}
+p hash2
