@@ -29,14 +29,22 @@ def name_scram(name)
   return name
 end
 
-agent_name = "ben van sickle"
-puts name_scram(name_swap(agent_name)).split.map(&:capitalize).join(' ')
+aliases = []
+
+#agent_name = "Ben Van Sickle"
+#puts name_scram(name_swap(agent_name)).split.map(&:capitalize).join(' ')
 
 choice = ""
 while choice != "quit"
   puts "Enter a name:"
   agent_name = gets.chomp.downcase
-  puts name_scram(name_swap(agent_name)).split.map(&:capitalize).join(' ')
+  code_name = name_scram(name_swap(agent_name)).split.map(&:capitalize).join(' ')
+  puts code_name
+  aliases << [agent_name, code_name]
   puts "Press the 'enter' key to input another name or type 'quit' to stop"
   choice = gets.chomp
+end
+
+aliases.each do |name, code|
+  puts "Real Name:#{name}, Code Name: #{code}"
 end
