@@ -17,16 +17,13 @@ def name_swap(name)
 end
 
 def name_scram(name)
-  i = 0
-  while i < name.length
+  name.each_char do |i|
     if name[i] == "z"
       name[i] = "a"
     elsif name[i] != " "
       name[i] = name[i].next
     end
-    i += 1
   end
-  return name
 end
 
 aliases = []
@@ -37,8 +34,8 @@ aliases = []
 choice = ""
 while choice != "quit"
   puts "Enter a name:"
-  agent_name = gets.chomp.downcase
-  code_name = name_scram(name_swap(agent_name)).split.map(&:capitalize).join(' ')
+  agent_name = gets.chomp
+  code_name = name_scram(name_swap(agent_name.downcase)).split.map(&:capitalize).join(' ')
   puts code_name
   aliases << [agent_name, code_name]
   puts "Press the 'enter' key to input another name or type 'quit' to stop"
