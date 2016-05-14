@@ -10,17 +10,24 @@ Check each letter of array
 #Switches first and last name. Turns works with multi-word
 #last names.
 def name_swap(name)
-  puts full_name = name.split(" ")
+  full_name = name.split(" ")
   first_name = full_name.shift 
   last_name = full_name.join(" ")
   full_name = "#{last_name} #{first_name}"
 end
 
 def name_scram(name)
+  i = 0
+  while i < name.length
+    if name[i] == "z"
+      name[i] = "a"
+    elsif name[i] != " "
+      name[i] = name[i].next
+    end
+    i += 1
+  end
+  return name
+end
 
-
-#def consonant_incr(name)  
-#  consonants = "bcdfghjklmnpqrstvwxyz"
-
-agent_name = "Ben Van Sickle"
-puts (name_swap(agent_name))
+agent_name = "ben van sickle"
+puts name_scram(name_swap(agent_name))
