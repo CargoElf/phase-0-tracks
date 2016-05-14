@@ -11,23 +11,16 @@ Check each letter of array
 #last names.
 def name_swap(name)
   puts full_name = name.split(" ")
-  first_name = full_name.shift
+  first_name = full_name.shift 
   last_name = full_name.join(" ")
-  full_name = "#{last_name} #{first_name}".split(" ")
+  full_name = "#{last_name} #{first_name}"
 end
 
-def vowel_incr(name)
-  vowels = "aeioua"
-  name.map! do |i|
-    if i == vowels.split[i].times
-      name = vowels[i+1]
-    end
-  end
-end
+def name_scram(name)
 
 
 #def consonant_incr(name)  
 #  consonants = "bcdfghjklmnpqrstvwxyz"
 
 agent_name = "Ben Van Sickle"
-puts vowel_incr(name_swap(agent_name))
+puts (name_swap(agent_name))
