@@ -30,4 +30,13 @@ def name_scram(name)
 end
 
 agent_name = "ben van sickle"
-puts name_scram(name_swap(agent_name))
+puts name_scram(name_swap(agent_name)).split.map(&:capitalize).join(' ')
+
+choice = ""
+while choice != "quit"
+  puts "Enter a name:"
+  agent_name = gets.chomp.downcase
+  puts name_scram(name_swap(agent_name)).split.map(&:capitalize).join(' ')
+  puts "Press the 'enter' key to input another name or type 'quit' to stop"
+  choice = gets.chomp
+end
