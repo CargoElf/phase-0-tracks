@@ -18,8 +18,8 @@ end
 
 # takes in name and first transforms consonants, then vowels
 def name_scram(name)
-  name = name.downcase.tr("bcdfghjklmnpqrstvwxyz", "cdfghjklmnpqrstvwxyzb")
-  name = name.downcase.tr("aeiou", "eioua")
+  name = name.tr("bcdfghjklmnpqrstvwxyz", "cdfghjklmnpqrstvwxyzb")
+  name = name.tr("aeiou", "eioua")
 end
 
 aliases = []
