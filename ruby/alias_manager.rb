@@ -10,12 +10,18 @@ Check each letter of array
 #Switches first and last name. Turns works with multi-word
 #last names.
 def name_swap(name)
-  full_name = name.split(" ")
+  full_name = name.split(" ") #splits name at spaces into array
   first_name = full_name.shift 
   last_name = full_name.join(" ")
   full_name = "#{last_name} #{first_name}"
 end
 
+def name_scram(name)
+  name = name.downcase.tr("bcdfghjklmnpqrstvwxyz", "cdfghjklmnpqrstvwxyzb")
+  name = name.downcase.tr("aeiou", "eioua")
+end
+
+=begin
 def name_scram(name)
   name.each_char do |i|
     if name[i] == "z"
@@ -25,6 +31,7 @@ def name_scram(name)
     end
   end
 end
+=end
 
 aliases = []
 
