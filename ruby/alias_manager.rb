@@ -13,7 +13,7 @@ Check each letter of letter of string
 # last names. splits name at spaces into array, bumps them 
 # one and turns back into string.
 def name_swap(name)
-  full_name = name.split.rotate.join(" ") 
+  name.split.rotate.join(" ") 
 end
 
 # takes in name and first transforms consonants, then vowels
