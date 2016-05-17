@@ -17,6 +17,10 @@ class Puppy
     puts "*rolls over*"
   end
 
+  def dog_years(human_years)
+    human_years * 4
+  end
+
 end
 
 spot = Puppy.new
@@ -24,3 +28,4 @@ spot.fetch("ball")
 
 spot.speak(3)
 spot.roll_over
+puts spot.dog_years(8)
