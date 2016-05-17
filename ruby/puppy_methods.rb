@@ -8,4 +8,4 @@ class Puppy
 end
 
 spot = Puppy.new
-spot.fetch("ball")
+spot.fetch("ball") 
