@@ -13,9 +13,14 @@ class Puppy
     end
   end
 
+  def roll_over
+    puts "*rolls over*"
+  end
+
 end
 
 spot = Puppy.new
 spot.fetch("ball") 
 
 spot.speak(3)
+spot.roll_over
