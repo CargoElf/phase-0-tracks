@@ -50,7 +50,17 @@ finn = Cat.new
 finn.meow
 finn.scratches("Couch")
 
+cat_array = []
+50.times do |x|
+  cat_array.push(x = Cat.new)
+end
 
+cat_array.each do |cat|
+  cat.meow
+  cat.scratches("Shin")
+end
+
+p cat_array.length
 
 
 =begin
