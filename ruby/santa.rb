@@ -10,14 +10,14 @@ class santa
 
   def initialize
     puts "Initializing Santa instance..."
+
+    gender = String.new
+
+    ethnicity = String.new
+
+    reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+
+    age = 0
   end
-
-  gender = String.new
-
-  ethnicity = String.new
-
-  reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
-
-  age = 0
 
 end
