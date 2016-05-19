@@ -29,6 +29,10 @@ class Santa
     @gender = new_gender
   end
 
+  def gender
+    @gender
+  end
+
   def age
     @age
   end
@@ -40,6 +44,16 @@ class Santa
 end
 
 santas = []
+example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+example_genders.length.times do |i|
+  santas << Santa.new(example_genders[i], example_ethnicities[i])
+end
 
 test = Santa.new("Female","Hispanic")
 puts test.get_mad_at("Vixen")
+test.celebrate_birthday
+puts "Happy birthday! You're #{test.age} now!"
+puts "Ethnicity is #{test.ethnicity}."
+test.gender = "gender fluid"
+puts "Gender is #{test.gender}"
