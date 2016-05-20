@@ -1,4 +1,12 @@
-class santa
+class Santa
+
+  def initialize (gender, ethnicity, age)
+    puts "Initializing Santa instance..."
+    @gender = gender
+    @ethnicity = ethnicity
+    @reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+    @age = age
+  end
 
   def speak
     puts "Ho, ho, ho! Haaaappy holidays!"
@@ -8,16 +16,66 @@ class santa
     puts "That was a good #{cookie}!"
   end
 
-  def initialize
-    puts "Initializing Santa instance..."
+  def celebrate_birthday
+    @age = age + 1
   end
 
-  gender = String.new
+  def get_mad_at(reindeer)
+    @reindeer_ranking.delete_if {|x| x == reindeer}
+    @reindeer_ranking << reindeer
+  end
 
-  ethnicity = String.new
+  def gender=(new_gender)
+    @gender = new_gender
+  end
 
-  reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+  def age=(new_age)
+    @age = new_age
+  end
 
-  age = 0
+  def gender
+    @gender
+  end
+
+  def age
+    @age
+  end
+
+  def ethnicity=(new_ethnicity)
+    @ethnicity = new_ethnicity
+  end
+
+  def ethnicity
+    @ethnicity
+  end
 
 end
+
+#santas = []
+example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+#example_genders.length.times do |i|
+#  santas << Santa.new(example_genders[i], example_ethnicities[i])
+#end
+
+
+
+10000.times do |i|
+  count = i + 1
+  i = Santa.new(example_genders.sample,example_ethnicities.sample,rand(140))
+  puts "Santa #{count}'s gender is #{i.gender}, ethnicity is #{i.ethnicity} and is #{i.age} in years."
+end
+
+
+
+
+
+=begin
+test = Santa.new("Female","Hispanic")
+puts test.get_mad_at("Vixen")
+test.celebrate_birthday
+puts "Happy birthday! You're #{test.age} now!"
+puts "Ethnicity is #{test.ethnicity}."
+test.gender = "gender fluid"
+puts "Gender is #{test.gender}"
+=end
