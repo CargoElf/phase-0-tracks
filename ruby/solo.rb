@@ -19,6 +19,7 @@ class Warrior
 
   def initialize (hit_points, strength, weapon, name)
     puts "A new warrior enters the world!"
+    puts ""
     @hit_points = hit_points
     @strength = strength
     @weapon = weapon
@@ -42,11 +43,9 @@ end
 warriors = []
 puts "We're storming the castle! I'm going to magic up some warriors!"
 
-count = 0
 choice = nil
 
 until choice == "stop"
-  i = count 
   puts "What shall we call this warrior, my liege?"
   name = gets.chomp
   puts "How strong shall this warrior be? (enter a number)"
@@ -56,12 +55,16 @@ until choice == "stop"
   puts "What weapon should we arm them with?"
   weapon = gets.chomp
   warriors << Warrior.new(hit_points, strength, weapon, name)
-  count += 1
   puts "I'm going to make another, unless you tell me to stop! (enter 'stop' to stop)"
   choice = gets.chomp
+  puts ""
 end
 
-puts warriors
+warriors.each do |i|
+  puts "Warrior number #{warriors.index(i) + 1}:"
+  puts "#{i.name} has #{i.strength} strength, #{i.hit_points} hit points, and is armed with a #{i.weapon}!"
+  puts ""
+end
 
 =begin
 stan = Warrior.new(23, 14, "sword", "Edwardo")
