@@ -1,6 +1,9 @@
 class Warrior
 
-  def initialize (hit_point, strength, weapon)
+  attr_reader :strength, :weapon
+  attr_accessor :attack, :hit_poits
+
+  def initialize (hit_points, strength, weapon)
     puts "A new warrior enters the world!"
     @hit_point = hit_point
     @strength = strength
@@ -16,7 +19,10 @@ class Warrior
   end
 
   def heal(healing)
-    hit_point = hit_point + healing
+    @hit_point = hit_point + healing
   end
 
 end
+
+stan = Warrior.new(23, 14, "sword")
+puts stan.take_damge(3)
