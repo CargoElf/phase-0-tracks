@@ -57,6 +57,31 @@ def add_item(item,amount,grocery_list)
   grocery_list.merge(new_hash)
 end
 
-grocery_list = create_list("carrots apples cereal pizza")
+def delete_item(item,grocery_list)
+  grocery_list.delete(item)
+  puts "\n"
+end
 
-p add_item("milk", 5, grocery_list)
+def update_amount(item,amount,grocery_list)
+  new_hash = {item => amount}
+  grocery_list.merge(new_hash)
+end
+
+def print_list(grocery_list)
+  puts "Here's what you have:"
+  grocery_list.each do |item,amount|
+    puts "You have #{amount} #{item}"
+  end
+end
+
+
+
+p grocery_list = create_list("carrots apples cereal pizza")
+
+p grocery_list = add_item("milk", 5, grocery_list)
+
+p grocery_list = update_amount("carrots", 5, grocery_list)
+
+p delete_item("milk",grocery_list)
+
+print_list(grocery_list)
