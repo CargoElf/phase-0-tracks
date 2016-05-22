@@ -52,7 +52,7 @@ def create_list(list)
   return grocery_list
 end
 
-def add_item(item,amount,grocery_list)
+def update_list(item,amount,grocery_list)
   new_hash = {item => amount}
   grocery_list.merge(new_hash)
 end
@@ -60,12 +60,13 @@ end
 def delete_item(item,grocery_list)
   grocery_list.delete(item)
   puts "\n"
+  return grocery_list
 end
 
-def update_amount(item,amount,grocery_list)
-  new_hash = {item => amount}
-  grocery_list.merge(new_hash)
-end
+#def update_amount(item,amount,grocery_list)
+#  new_hash = {item => amount}
+#  grocery_list.merge(new_hash)
+#end
 
 def print_list(grocery_list)
   puts "Here's what you have:"
@@ -74,14 +75,12 @@ def print_list(grocery_list)
   end
 end
 
-
-
-p grocery_list = create_list("carrots apples cereal pizza")
-
-p grocery_list = add_item("milk", 5, grocery_list)
-
-p grocery_list = update_amount("carrots", 5, grocery_list)
-
-p delete_item("milk",grocery_list)
+grocery_list = create_list("carrots apples cereal pizza")
+grocery_list = update_list("lemonade", 2, grocery_list)
+grocery_list = update_list("tomatoes", 3, grocery_list)
+grocery_list = update_list("onions", 1, grocery_list)
+grocery_list = update_list("ice cream", 4, grocery_list)
+grocery_list = delete_item("lemonade", grocery_list)
+grocery_list = update_list("ice cream", 1, grocery_list)
 
 print_list(grocery_list)
