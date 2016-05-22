@@ -42,3 +42,21 @@ Method to print a list and make it look pretty
   output: informational formated list
 
 =end
+
+def create_list(list)
+  list = list.split(" ")
+  grocery_list = Hash.new
+  list.each do |i|
+    grocery_list[i] = 1
+  end
+  return grocery_list
+end
+
+def add_item(item,amount,grocery_list)
+  new_hash = {item => amount}
+  grocery_list.merge(new_hash)
+end
+
+grocery_list = create_list("carrots apples cereal pizza")
+
+p add_item("milk", 5, grocery_list)
