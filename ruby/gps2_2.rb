@@ -87,20 +87,26 @@ print_list(grocery_list)
 =begin
 What did you learn about pseudocode from working on this challenge?
 
+  I learned the importance of breaking up the pseudo code. Previously I don't think I've specifically broke it up into methods and I definitely didn't think about input and output for each method in pseudocode.
 
 What are the tradeoffs of using arrays and hashes for this challenge?
 
+  To use an array it would have to be multidimensional. With hash the item is used as the key and the amount is tied directly to it. Hashes aren't as simple when it comes to shoveling in data, but seems like a more natural fit.
 
 What does a method return?
 
+  Methods return the last line in the method.
 
 What kind of things can you pass into methods as arguments?
 
+  Strings, integers, variables, arrays, hashes, booleans, methods nested in the parameters.
 
 How can you pass information between methods?
 
+  By assigning a value to a variable initially and assigning that variable as an argument in another method.
 
 What concepts were solidified in this challenge, and what concepts are still confusing?
 
+  Concepts of working with a hash really solidified for me. I have a better idea about pseudocoding. It also sured up how data is returned from methods implicitly vs explicitly. I'm not sure that I'm confused about anything else at this time.
 
 =end
