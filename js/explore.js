@@ -14,4 +14,9 @@ function reverse(word) {
 }
 
 var reverseResult =  reverse("InputWord");
-console.log(reverseResult);
+
+if (reverseResult.length  <= 8) {
+  console.log(reverseResult);
+} else {
+  console.log("Why did you pick a long word like " + reverse(reverseResult) + "?");
+}
