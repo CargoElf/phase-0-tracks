@@ -8,7 +8,7 @@ output: string reversed
 
 function reverse(word) {
   var wordReverse = '';
-  for (var i = word.length - 1; i >= 0; i--) //start at end of string and work down
+  for (var i = word.length - 1; i >= 0; i--); //start at end of string and work down
     wordReverse += word[i];
   return wordReverse;
 }
