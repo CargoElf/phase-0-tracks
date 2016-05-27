@@ -2,13 +2,21 @@
 Longest Phrase Function
 input: array of words or phrases
 For each array item
-  check the length of each item
-  store the length of each item
-  check the length against each other item length
+  check the length against the item that had the previous greatest length
+  If the new item is larger, replace the previous phrase with it
 return the longest phrase or word
 output: string
 */
 
 function longestPhrase(phrases) {
-  for (var i = 0; i < phrases.length; i++ );
+  var biggest = "";
+  for (var i = 0; i < phrases.length; i++) {
+    if (phrases[i].length > biggest.length) {
+      biggest = phrases[i];
+    } 
+  }
+  return biggest;
 }
+
+var testArray = ["big", "bigy", "biggest"];
+console.log(longestPhrase(testArray));
