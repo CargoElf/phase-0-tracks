@@ -6,6 +6,10 @@ For each array item
   If the new item is larger, replace the previous phrase with it
 return the longest phrase or word
 output: string
+
+Key-Value Match Function
+input: Object (key + value)
+
 */
 
 function longestPhrase(phrases) {
