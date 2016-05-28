@@ -48,7 +48,7 @@ function keyValueMatch(object1,object2) {
   return match;
 }
 
-function randomArrayGenerator(number) {
+function ArrayGenerator(number) {
   var newArray = [];
   for (var i = 0; i < number; i++) {
     newArray += "";
