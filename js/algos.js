@@ -35,7 +35,6 @@ function keyValueMatch(object1,object2) {
   var match = false;
   for (var i in object1, object2) {
     if (object1[i] == object2[i]) {
-      console.log(object1[i] + " " + object2[i]);
       match = true;
     }
   }
