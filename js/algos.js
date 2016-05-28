@@ -65,7 +65,6 @@ function arrayGenerator(number) {
       newArray[i] += letters[randomNum(0,25)];
     }
   }
-  console.log(newArray)
   return newArray;
 }
 
@@ -73,7 +72,15 @@ function randomNum(min,max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-arrayGenerator(randomNum(1,50));
+for (var i = 0; i < 10; i++) {
+  wordArray = arrayGenerator(randomNum(2,8));
+  console.log("Array number " + (i + 1) + " :");
+  console.log(wordArray);
+  longest = longestPhrase(wordArray);
+  console.log("Longest word from array number " + (i + 1) + " :")
+  console.log(longest);
+  console.log("")
+}
 
 /*
 first = {name: "Steven", age: 54};
