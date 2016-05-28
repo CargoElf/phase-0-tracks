@@ -31,5 +31,21 @@ function longestPhrase(phrases) {
   return biggest;
 }
 
-var testArray = ["big", "bigy", "biggest"];
-console.log(longestPhrase(testArray));
+function keyValueMatch(object1,object2) {
+  var match = false;
+  for (var i in object1, object2) {
+    if (object1[i] == object2[i]) {
+      console.log(object1[i] + " " + object2[i]);
+      match = true;
+    }
+  }
+  return match;
+}
+
+
+first = {name: "Steven", age: 54};
+second = {name: "Tamir", age: 54};
+
+console.log(keyValueMatch(first,second));
+//var testArray = ["big", "bigy", "biggest"];
+//console.log(longestPhrase(testArray));
