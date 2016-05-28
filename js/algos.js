@@ -53,19 +53,31 @@ function keyValueMatch(object1,object2) {
   return match;
 }
 
-function ArrayGenerator(number) {
+function arrayGenerator(number) {
+  var letters = "abcdefghijklmnopqrstuvwxyz";
   var newArray = [];
+  var randWord = "";
   for (var i = 0; i < number; i++) {
-    newArray += "";
+    newArray.push("");
     console.log(newArray);
   }
+  for (var i in newArray) {
+    var randLength = randomNum(1,10);
+    for (var x = 0; x < randLength; x++) {
+      randWord += letters[randomNum(0,25)];
+    }
+    console.log(randWord)
+    newArray[i] += randWord;
+  }
+  console.log(newArray)
+  return newArray;
 }
 
 function randomNum(min,max) {
-  return Math.floor(Math.random() * (max - min)) + min;
+  return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-randomArrayGenerator(5);
+arrayGenerator(5);
 
 /*
 first = {name: "Steven", age: 54};
