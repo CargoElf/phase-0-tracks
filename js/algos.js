@@ -17,7 +17,14 @@ For key-value of objects
   If neither condition is met
     Return false
 output: true or false
-  
+
+Random Array Generator
+input: integer
+Create array with a length of given integer
+For each item in array
+  Randomly generate a number 1-10
+    Create a string of the randomly generated length with random letters
+output: array of strings
 
 */
 
@@ -41,10 +48,24 @@ function keyValueMatch(object1,object2) {
   return match;
 }
 
+function randomArrayGenerator(number) {
+  var newArray = [];
+  for (var i = 0; i < number; i++) {
+    newArray += "";
+    console.log(newArray);
+  }
+}
 
+function randomNum(min,max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
+randomArrayGenerator(5);
+
+/*
 first = {name: "Steven", age: 54};
 second = {name: "Tamir", age: 54};
-
 console.log(keyValueMatch(first,second));
-//var testArray = ["big", "bigy", "biggest"];
-//console.log(longestPhrase(testArray));
+var testArray = ["big", "bigy", "biggest"];
+console.log(longestPhrase(testArray));
+*/
