@@ -75,11 +75,14 @@ function randomNum(min,max) {
 for (var i = 0; i < 10; i++) {
   wordArray = arrayGenerator(randomNum(2,8));
   console.log("Array number " + (i + 1) + " :");
-  console.log(wordArray);
+  for (var x in wordArray) {
+    console.log(wordArray[x]);
+  }
+//  console.log(wordArray);
   longest = longestPhrase(wordArray);
   console.log("Longest word from array number " + (i + 1) + " :")
   console.log(longest);
-  console.log("")
+  console.log("");
 }
 
 /*
