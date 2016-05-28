@@ -8,7 +8,16 @@ return the longest phrase or word
 output: string
 
 Key-Value Match Function
-input: Object (key + value)
+input: 2 Objects (key + value)
+For key-value of objects
+  Check to see if key is the same
+    If so, return true
+  Check to see if value is the same
+    If so, return true
+  If neither condition is met
+    Return false
+output: true or false
+  
 
 */
 
