@@ -18,13 +18,18 @@ For key-value of objects
     Return false
 output: true or false
 
-Random Array Generator
+Array Generator
 input: integer
 Create array with a length of given integer
 For each item in array
   Randomly generate a number 1-10
     Create a string of the randomly generated length with random letters
 output: array of strings
+
+Random Number Generator
+input: min and max range
+Generate number between the min and max range inclusive
+output: integer
 
 */
 
