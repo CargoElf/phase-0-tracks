@@ -58,7 +58,6 @@ function arrayGenerator(number) {
   var newArray = [];
   for (var i = 0; i < number; i++) {
     newArray.push("");
-//    console.log(newArray);
   }
   for (var i in newArray) {
     var randLength = randomNum(1,10);
@@ -71,9 +70,7 @@ function arrayGenerator(number) {
 }
 
 function randomNum(min,max) {
-  var randomNum = Math.floor(Math.random() * (max - min + 1) + min);
-  console.log(randomNum);
-  return randomNum;
+  return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
 arrayGenerator(randomNum(1,50));
