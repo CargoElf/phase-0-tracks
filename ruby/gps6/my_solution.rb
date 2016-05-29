@@ -47,15 +47,12 @@ class VirusPredictor
   def speed_of_spread #in months
   # We are still perfecting our formula here. The speed is also affected
   # by additional factors we haven't added into this functionality.
-  speed = 0.0
+  speed = 2.5
 
-  case @population_density
-  when 200.. 100000000000000000000000000 then speed += 0.5
-  when 150.. 199 then speed += 1
-  when 100.. 149 then speed += 1.5
-  when 50.. 99 then speed += 2
-  else 
-  speed += 2.5
+  if @population_density >= 200
+    speed = 0.5
+  elsif @population_density >= 50 && @population_density < 200
+    speed = speed - ((@population_density / 50).floor / 2.0)
   end
 
   puts " and will spread across the state in #{speed} months.\n\n"
@@ -65,3 +62,9 @@ class VirusPredictor
 end
 
 #=========================================================
+
+# DRIVER CODE
+ # initialize VirusPredictor for each state
+STATE_DATA.each do |state, data|
+  VirusPredictor.new(state, data[:population_density], data[:population]).virus_effects
+end
