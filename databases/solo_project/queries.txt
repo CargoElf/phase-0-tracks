@@ -10,3 +10,6 @@ CREATE TABLE characters (
   class VARCHAR(255),
   FOREIGN KEY(class) REFERENCES classes(id)
 );
+
+INSERT INTO classes(class) VALUES ("warrior"), ("wizard"), ("thief");
+INSERT INTO characters(name,level,class) VALUES ("warrior"), ("wizard"), ("thief");
