@@ -1,0 +1,12 @@
+CREATE TABLE classes (
+  id INTEGER PRIMARY KEY,
+  class VARCHAR(255)
+);
+
+CREATE TABLE characters (
+  id INTEGER PRIMARY KEY,
+  name VARCHAR(255),
+  level INTEGER,
+  class VARCHAR(255),
+  FOREIGN KEY(class) REFERENCES classes(id)
+);
