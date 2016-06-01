@@ -1,3 +1,5 @@
+**DB SETUP**
+
 CREATE TABLE good_alignment (
   id INTEGER PRIMARY KEY,
   good BOOLEAN
@@ -12,8 +14,45 @@ CREATE TABLE characters (
 );
 
 INSERT INTO good_alignment(good) VALUES ("true"), ("false");
-INSERT INTO characters(name,level,good) VALUES ("Warrune Qinnorin",5,"true"), ("Sarnian Miarie",10,"false"), ("Clerlinar Chaero",13,"true"),("Wiltrydal Torhice",4,"false"),("Nigeril Jomaer",20,"false");
+INSERT INTO characters(name,level,good) VALUES ("Warrune Qinnorin",5,"1"), ("Sarnian Miarie",10,"2"), ("Clerlinar Chaero",13,"1"),("Wiltrydal Torhice",4,"2"),("Nigeril Jomaer",20,"2");
+
+**RELEASE 2**
+
+sqlite> SELECT * FROM characters;
+1|Warrune Qinnorin|5|1
+2|Sarnian Miarie|10|2
+3|Clerlinar Chaero|13|1
+4|Wiltrydal Torhice|4|2
+5|Nigeril Jomaer|20|2
+
+sqlite> UPDATE characters SET good="1" WHERE name="Nigeril Jomaer";
+
+sqlite> SELECT * FROM characters, good_alignment WHERE characters.good = good_alignment.id;
+1|Warrune Qinnorin|5|1|1|true
+2|Sarnian Miarie|10|2|2|false
+3|Clerlinar Chaero|13|1|1|true
+4|Wiltrydal Torhice|4|2|2|false
+5|Nigeril Jomaer|20|1|1|true
 
 
+sqlite> SELECT characters.name, characters.level, good_alignment.good FROM characters JOIN good_alignment ON characters.good = good_alignment.id;
+Warrune Qinnorin|5|true
+Sarnian Miarie|10|false
+Clerlinar Chaero|13|true
+Wiltrydal Torhice|4|false
+Nigeril Jomaer|20|true
+
+
+sqlite> SELECT * FROM good_alignment LEFT JOIN characters;
+1|true|1|Warrune Qinnorin|5|1
+1|true|2|Sarnian Miarie|10|2
+1|true|3|Clerlinar Chaero|13|1
+1|true|4|Wiltrydal Torhice|4|2
+1|true|5|Nigeril Jomaer|20|1
+2|false|1|Warrune Qinnorin|5|1
+2|false|2|Sarnian Miarie|10|2
+2|false|3|Clerlinar Chaero|13|1
+2|false|4|Wiltrydal Torhice|4|2
+2|false|5|Nigeril Jomaer|20|1
 
 
