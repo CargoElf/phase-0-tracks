@@ -44,17 +44,22 @@ Nigeril Jomaer|20|true
 
 sqlite> DELETE FROM characters WHERE level=20;
 
+**RELEASE 3**
 
-sqlite> SELECT * FROM good_alignment LEFT JOIN characters;
-1|true|1|Warrune Qinnorin|5|1
-1|true|2|Sarnian Miarie|10|2
+sqlite> SELECT * FROM good_alignment LEFT JOIN characters WHERE characters.good = good_alignment.id;
 1|true|3|Clerlinar Chaero|13|1
-1|true|4|Wiltrydal Torhice|4|2
-1|true|5|Nigeril Jomaer|20|1
-2|false|1|Warrune Qinnorin|5|1
+1|true|1|Warrune Qinnorin|5|1
 2|false|2|Sarnian Miarie|10|2
-2|false|3|Clerlinar Chaero|13|1
 2|false|4|Wiltrydal Torhice|4|2
-2|false|5|Nigeril Jomaer|20|1
 
+sqlite> SELECT * FROM good_alignment INNER JOIN characters WHERE characters.good = good_alignment.id;
+1|true|1|Warrune Qinnorin|5|1
+2|false|2|Sarnian Miarie|10|2
+1|true|3|Clerlinar Chaero|13|1
+2|false|4|Wiltrydal Torhice|4|2
 
+sqlite> SELECT * FROM characters RIGHT JOIN good_alignment WHERE characters.good = good_alignment.id;
+Error: RIGHT and FULL OUTER JOINs are not currently supported
+
+SELECT * FROM good_alignment FULL JOIN characters WHERE characters.good = good_alignment.id;
+Error: RIGHT and FULL OUTER JOINs are not currently supported
