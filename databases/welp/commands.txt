@@ -1,0 +1,32 @@
+CREATE TABLE business (
+  id INTEGER PRIMARY KEY,
+  name varchar(255)
+);
+
+CREATE TABLE users (
+  id INTEGER PRIMARY KEY,
+  first_name varchar(255),
+  last_name varchar(255)
+);
+
+CREATE TABLE reviews (
+  id INTEGER PRIMARY KEY,
+  stars INT,
+  comment varchar(255),
+  business_id INT,
+  user_id INT,
+  FOREIGN KEY (business_id) REFERENCES business(id),
+  FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+INSERT INTO business (name) VALUES ("Grundy Hollow Wedding Chapel"),("The Beagle Nightclub"),("Lotus Yoga"), ("Plumbing by Janet"), ("Sushi World"), ("JoeBob's Sportz Barn");
+
+INSERT INTO users (first_name, last_name) VALUES ("Bradford", "Pitt"), ("Mandy", "Kaling"), ("Angela", "Jolie"), ("Steven", "Wonder"), ("Holly", "Berry"), ("Merryl", "Streepman"), ("Denzel", "George");
+
+INSERT INTO reviews (stars, comment, business_id, user_id)
+  VALUES (3, "The food was not undelicious.", 5, 5),
+  (5, "Jannet does good work.", 4, 2),
+  (1, "I fell through the floor during the wedding!", 1, 3),
+  (4, "The lights weren't too bright.", 2, 7),
+  (2, "I was bent like a pretzel.", 3, 6),
+  (3, "Good selection, smells like a barn.", 6, 4);
