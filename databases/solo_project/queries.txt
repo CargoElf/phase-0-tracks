@@ -42,6 +42,8 @@ Clerlinar Chaero|13|true
 Wiltrydal Torhice|4|false
 Nigeril Jomaer|20|true
 
+sqlite> DELETE FROM characters WHERE level=20;
+
 
 sqlite> SELECT * FROM good_alignment LEFT JOIN characters;
 1|true|1|Warrune Qinnorin|5|1
