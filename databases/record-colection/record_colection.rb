@@ -26,6 +26,7 @@ Label Entry
 =end
 
 require 'sqlite3'
+require 'faker'
 require_relative 'db_setup'
 
 db = SQLite3::Database.new("record_colection.db")
@@ -61,6 +62,21 @@ def artist_entry(db, artist_name) #
   id
 end
 
+=begin
+def label_entry(db, label_name)
+  entry = db.execute("SELECT * FROM label WHERE label = '#{label_name}'")
+  if entry == []
+    db.execute("INSERT INTO label (label) VALUES (?)", [label_name])
+    datadump = db.execute("SELECT id FROM label WHERE label = '#{label_name}'")
+    id = datadump['id']
+  else
+    datadump = db.execute("SELECT id FROM label WHERE label = '#{label_name}'")
+    id = datadump['id']
+  end
+  id
+end
+=end
+
 #Checks if entry exists and if not, enters it into label
 #returns id.
 def label_entry(db, label_name)
@@ -93,22 +109,81 @@ def album_entry(db, artist, title, label, rating, release_date)
   )
 end
 
-#album_entry(db, artist_entry(db,"Yet Another"), "Something", label_entry(db, "New Label"), 1, 1997)
-def view_colection(db)
+def view_colection(db, selection)
+  case selection
+  when '1'
+    collection = db.execute("
+      SELECT ar.artist,
+         al.title,
+         l.label,
+         al.rating,
+         al.release_date
+      FROM artist ar
+         INNER JOIN
+         albums al ON ar.id = al.artist_id
+         INNER JOIN
+         label l ON l.id = al.label_id"
+    )
+  when '2'
+    puts "What artist do you wish to search?"
+    answer = gets.chomp 
+    collection = db.execute("
+      SELECT ar.artist,
+         al.title,
+         l.label,
+         al.rating,
+         al.release_date
+      FROM artist ar
+         INNER JOIN
+         albums al ON ar.id = al.artist_id
+         INNER JOIN
+         label l ON l.id = al.label_id
+      WHERE ar.artist = '#{answer}'"
+    )
+  when '3'
+    puts "What label do you wish to search?"
+    answer = gets.chomp 
+    collection = db.execute("
+      SELECT ar.artist,
+         al.title,
+         l.label,
+         al.rating,
+         al.release_date
+      FROM artist ar
+         INNER JOIN
+         albums al ON ar.id = al.artist_id
+         INNER JOIN
+         label l ON l.id = al.label_id
+      WHERE l.label = '#{answer}'"
+    )    
+  end
+  collection.each do |record|
+    puts "Artist: #{record['artist']} Album: #{record['title']} Label: #{record['label']} Rating: #{record['rating']} Release Date: #{record['release_date']}"
+  end
+end
+
+def delete_entry(db)
   collection = db.execute("
-    SELECT ar.artist,
+    SELECT al.id,
+       ar.artist,
        al.title,
        l.label,
        al.rating,
        al.release_date
-    FROM artist ar
-       INNER JOIN
-       albums al ON ar.id = al.artist_id
-       INNER JOIN
-       label l ON l.id = al.label_id"
-       )
+     FROM artist ar
+        INNER JOIN
+        albums al ON ar.id = al.artist_id
+        INNER JOIN
+        label l ON l.id = al.label_id"
+  )
   collection.each do |record|
-    puts "Artist: #{record['artist']} Album: #{record['title']} Label: #{record['label']} Rating: #{record['rating']} Release Date: #{record['release_date']}"
+    puts "Number: #{record['id']} Artist: #{record['artist']} Album: #{record['title']} Label: #{record['label']} Rating: #{record['rating']} Release Date: #{record['release_date']}"
+  end
+  puts "Enter the number corresponding to the entry you wish to delete."
+  puts "If you don't wish to delete anything, press enter"
+  answer = gets.chomp
+  if answer != ""
+    db.execute("DELETE FROM albums WHERE id = #{answer.to_i}")
   end
 end
 
@@ -140,6 +215,31 @@ until response == 'quit'
       answer = gets.chomp[0].downcase
     end
   when '2'
-    view_colection(db)
+    answer = 'y'
+    until answer == 'n'
+      puts "Would you like to..."
+      puts "1. View all records"
+      puts "2. View an artist"
+      puts "3. View a label"
+      selection = gets.chomp
+      view_colection(db, selection)
+      puts "Would you like to view again? y/n"
+      answer = gets.chomp[0].downcase
+    end
+  when '3'
+    answer = 'y'
+    until answer == 'n'
+      delete_entry(db)
+      puts "Would you like to delete another? y/n"
+      answer = gets.chomp[0].downcase
+    end
   end
 end
+
+=begin #Populate with some test data
+possible_labels = ["Fun Times", "BLVD Records", "4AD", "Big Time Records", "Sonic Club", "Angry Sounds", "Sweet Sounds"]
+possible_artists = ["Twitch of Wrench", "Sexual Mite", "Process Luna", "Inertia Forever", "Heat Death", "Rap Man", "Chartreuse Windshield", "Skull Cider"]
+50.times do
+  album_entry(db, artist_entry(db, possible_artists.sample), Faker::App.name, label_entry(db, possible_labels.sample), rand(6) , (rand(20) + 1996))
+end
+=end
