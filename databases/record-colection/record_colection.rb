@@ -38,7 +38,7 @@ db.results_as_hash = true
 #end
 
 #Checks if entry exists and if not, enters it into artist
-#returns id.
+#returns id. Should be able to refactor
 def artist_entry(db, artist_name) #
   artists = db.execute("SELECT * FROM artist")
   exsists = false
@@ -62,7 +62,7 @@ def artist_entry(db, artist_name) #
   id
 end
 
-=begin
+=begin # Need to look into this more.
 def label_entry(db, label_name)
   entry = db.execute("SELECT * FROM label WHERE label = '#{label_name}'")
   if entry == []
@@ -78,7 +78,7 @@ end
 =end
 
 #Checks if entry exists and if not, enters it into label
-#returns id.
+#returns id. Should be able to refactor
 def label_entry(db, label_name)
   labels = db.execute("SELECT * FROM label")
   exsists = false
