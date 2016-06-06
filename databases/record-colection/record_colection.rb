@@ -94,24 +94,52 @@ def album_entry(db, artist, title, label, rating, release_date)
 end
 
 #album_entry(db, artist_entry(db,"Yet Another"), "Something", label_entry(db, "New Label"), 1, 1997)
+def view_colection(db)
+  collection = db.execute("
+    SELECT ar.artist,
+       al.title,
+       l.label,
+       al.rating,
+       al.release_date
+    FROM artist ar
+       INNER JOIN
+       albums al ON ar.id = al.artist_id
+       INNER JOIN
+       label l ON l.id = al.label_id"
+       )
+  collection.each do |record|
+    puts "Artist: #{record['artist']} Album: #{record['title']} Label: #{record['label']} Rating: #{record['rating']} Release Date: #{record['release_date']}"
+  end
+end
 
-answer = "y"
-puts "Lets enter some vinyl info!"
-
-until answer == "n"
-  puts "What's the artist's name?"
-  artist = gets.chomp
-  puts "What's the title of the album?"
-  title = gets.chomp
-  puts "what's the label that published it?"
-  label = gets.chomp
-  puts "What would you give it out of 5 stars?"
-  rating = gets.chomp.to_i
-  puts "What year did it come out?"
-  release_date = gets.chomp.to_i
-  album_entry(db, artist_entry(db, artist), title, label_entry(db, label), rating , release_date)
-  puts "Would you like to view your records?"
-  records = gets.chomp[0].downcase
-  puts "Would you like to enter another record? y/n"
-  answer = gets.chomp[0].downcase
+response = nil
+until response == 'quit'
+  puts "Menu"
+  puts "1. Add Records"
+  puts "2. View Records"
+  puts "3. Delete Records"
+  puts "Enter 'quit' to quit."
+  response = gets.chomp.downcase
+  case response
+  when '1'
+    answer = 'y'
+    until answer == 'n'
+      puts "Lets enter some vinyl info!"
+      puts "What's the artist's name?"
+      artist = gets.chomp
+      puts "What's the title of the album?"
+      title = gets.chomp
+      puts "what's the label that published it?"
+      label = gets.chomp
+      puts "What would you give it out of 5 stars?"
+      rating = gets.chomp.to_i
+      puts "What year did it come out?"
+      release_date = gets.chomp.to_i
+      album_entry(db, artist_entry(db, artist), title, label_entry(db, label), rating , release_date)
+      puts "Would you like to enter another record? y/n"
+      answer = gets.chomp[0].downcase
+    end
+  when '2'
+    view_colection(db)
+  end
 end
