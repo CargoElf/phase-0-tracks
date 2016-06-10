@@ -1,0 +1,36 @@
+body {
+  background-color: lightgrey;
+}
+
+h1, h2, h3, p {
+  font-family: Arial;
+}
+
+p {
+  padding: 10px;
+}
+
+main, nav {
+  background-color: lightblue;
+  padding: 10px;
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+#important {
+  border: solid;
+  border-color: black;
+}
+
+.surround {
+  border: dotted;
+  border-color: blue;
+}
+
+#greeting {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
