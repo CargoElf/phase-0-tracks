@@ -6,6 +6,10 @@ h1, h2, h3, p {
   font-family: Arial;
 }
 
+p {
+  padding: 10px;
+}
+
 main, nav {
   background-color: lightblue;
   padding: 10px;
@@ -14,19 +18,13 @@ main, nav {
   margin-right: auto;
 }
 
-aside {
-  float: left;
-  width: 100px;
-  margin-left: 20%;
-  background-color: green;
-}
 
 #important {
   border: solid;
   border-color: black;
 }
 
-.border {
+.surround {
   border: dotted;
   border-color: blue;
 }
