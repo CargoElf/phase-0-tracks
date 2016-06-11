@@ -12,5 +12,11 @@
       <li><%= student['name'] %>, <%= student['age'] %></li>
     <% end %>
   </ul>
+  <p>Click <a href="campus">here</a> to search by campus.</p>
+  <ul>
+  <% @students.each do |student| %>
+    <li><%= student['id'] %><%= student['name'] %>, <%= student['age'] %></li>
+  <% end %>
+  </ul>
 </body>
 </html>
